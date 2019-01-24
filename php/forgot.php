@@ -35,7 +35,7 @@ else {
             $message = "Здравствуйте, ".$row['name']."<br>Это письмо для восстановления пароля с сайта: http://de-san.com/RES/index.php <br>Ваш новый пароль: ".PASSWORD;
             $headers = "Content-type: text/html; charset=UTF-8 \r\n";
             $headers .= "From: <mariakolobaeva0369@gmail.com>\r\n";
-            mail('mariakolobaeva0369@gmail.com', $subject, $message, $headers); /*$row['username'];*/
+            mail($to, $subject, $message, $headers);
         } else {
             return 0;
         }    
